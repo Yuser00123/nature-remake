@@ -10,3 +10,7 @@ function open_protect() {
 function open_hacks() {
     window.location.href = "hacks.html";
 }
+
+function open_facts() {
+    window.location.href = "facts.html";
+}
