@@ -35,3 +35,19 @@ p{
     border-radius: 15px;
     padding: 15px;
 }
+
+button{
+    width: 200px;
+    height: 60px;
+    border: 5px solid black;
+    border-radius: 20px;
+    font-size: large;
+    padding: 5px;
+    font-weight: bold;
+    font-family: 'Fauna One', system-ui;
+    background: linear-gradient(135deg, #07a3b2, #d9ecc7);
+}
+
+button:active{
+    background: linear-gradient(135deg, #d9ecc7, #07a3b2);
+}
