@@ -6,3 +6,7 @@ function home_page() {
 function open_protect() {
     window.location.href = "protect.html";
 }
+
+function open_hacks() {
+    window.location.href = "hacks.html";
+}
