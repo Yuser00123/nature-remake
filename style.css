@@ -1,13 +1,25 @@
-img {
+@import url('https://fonts.googleapis.com/css2?family=Agrave+Pro:wght@100..700&family=Creepster&family=Fauna+One&family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 10px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
     width: 300px;
 }
+
 body{
     text-align: center;
-    font-family:'Fantasy';
-    background: rgb(214, 213, 219);
-    color: rgb(5, 70, 5);
+    font-family: 'Fauna One', system-ui;
+    background: linear-gradient(45deg, #5a3f37, #2c7744);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
 }
 
 p{
-    font-size: larger;
+    font-size: large;
 }
