@@ -51,3 +51,21 @@ button{
 button:active{
     background: linear-gradient(135deg, #d9ecc7, #07a3b2);
 }
+
+#btn-sub{
+    width: 100px;
+    height: 40px;
+    border: 1.5px solid white;
+    border-radius: 10px;
+}
+
+input{
+    font-family: 'Fauna One', system-ui;
+    height: 60px;
+    width: 250px;
+    padding: 10px;
+    text-align: center;
+    font-size: large;
+    border: 2px solid white;
+    border-radius: 20px;
+}
