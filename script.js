@@ -30,3 +30,7 @@ function show_enjoyment() {
     alert(`I also liked the fact no. ${fact_num}!`);
     }
 }
+
+function video() {
+    window.location.href = "video.html";
+}
