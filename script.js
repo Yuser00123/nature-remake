@@ -1,5 +1,6 @@
 var fact_num = 8;
 let task = document.getElementById("randomTask");
+let cert_validity_content = document.getElementById("certOrNot");
 
 const natureTasks = [
   `Plant at least two native trees in your neighbourhood, school, or garden. Before planting, research which tree species naturally grow in your region and are suitable for the available space. Ask someone experienced about proper planting techniques and watering requirements. Make sure the trees have enough sunlight and room to grow. Take responsibility for watering them regularly, especially during hot weather. Avoid damaging existing plants while preparing the soil. Add a small protective fence if necessary. Take photographs of your planting activity and observe the trees every month. Your goal is not simply to plant trees but to help them survive and grow into healthy habitats for wildlife.`,
@@ -300,4 +301,8 @@ function random_num() {
 
 function show_random() {
     task.innerHTML = natureTasks[random_num()];
+}
+
+function cert() {
+    window.location.href = "certificate.html";
 }
