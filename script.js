@@ -1,6 +1,37 @@
 var fact_num = 8;
 let task = document.getElementById("randomTask");
 let cert_validity_content = document.getElementById("certOrNot");
+let btn_protect = document.getElementById("protect");
+let btn_hacks = document.getElementById("hacks");
+let btn_facts = document.getElementById("facts");
+let btn_videos = document.getElementById("videos");
+let btn_random = document.getElementById("get-random");
+
+let protect_clicked = false;
+let hacks_clicked = false;
+let facts_clicked = false;
+let videos_clicked = false;
+let random_clicked = false;
+
+btn_protect.addEventListener('click', () => {
+    protect_clicked = true;
+});
+
+btn_hacks.addEventListener('click', () => {
+    hacks_clicked = true;
+});
+
+btn_facts.addEventListener('click', () => {
+    facts_clicked = true;
+});
+
+btn_videos.addEventListener('click', () => {
+    videos_clicked = true;
+});
+
+btn_random.addEventListener('click', () => {
+    random_clicked = true;
+});
 
 const natureTasks = [
   `Plant at least two native trees in your neighbourhood, school, or garden. Before planting, research which tree species naturally grow in your region and are suitable for the available space. Ask someone experienced about proper planting techniques and watering requirements. Make sure the trees have enough sunlight and room to grow. Take responsibility for watering them regularly, especially during hot weather. Avoid damaging existing plants while preparing the soil. Add a small protective fence if necessary. Take photographs of your planting activity and observe the trees every month. Your goal is not simply to plant trees but to help them survive and grow into healthy habitats for wildlife.`,
@@ -306,3 +337,12 @@ function show_random() {
 function cert() {
     window.location.href = "certificate.html";
 }
+
+function open_cert(name) {
+    if (protect_clicked === true && hacks_clicked === true && facts_clicked === true && videos_clicked === true && random_clicked === true) {
+        cert_validity_content.innerHTML = `Congratulations ${name}! You have explored our whole website and have earned a certificate of appreciation.`
+    }
+    else {
+        cert_validity_content.innerHTML = `Sorry ${name}, you have not explored our whole website yet. Please explore all the sections to earn the certificate.`
+    }
+} 
