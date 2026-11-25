@@ -34,3 +34,7 @@ function show_enjoyment() {
 function video() {
     window.location.href = "video.html";
 }
+
+function random_act() {
+    window.location.href = "random.html";
+}
