@@ -336,9 +336,10 @@ function get_name() {
 
 function open_cert(name) {
     if (sessionStorage.getItem("protect_clicked") === "true" && sessionStorage.getItem("hacks_clicked") === "true" && sessionStorage.getItem("facts_clicked") === "true" && sessionStorage.getItem("videos_clicked") === "true" && sessionStorage.getItem("random_clicked") === "true") {
-        cert_validity_content.textContent = `Congratulations ${name}! You have explored our whole website and have earned a certificate of appreciation.`
+        let url = `https://nature-certificate-api.vercel.app/certificate?name=${name}`;
+        cert_validity_content.innerHTML = `Congratulations ${name}! You have explored our whole website and have earned a certificate of appreciation. <a href="${url}">Click here</a> to get your certificate.`
     }
     else {
-        cert_validity_content.textContent = `Sorry ${name}, you have not explored our whole website yet. Please explore all the sections to earn the certificate.`
+        cert_validity_content.innerHTML = `Sorry ${name}, you have not explored our whole website yet. Please explore all the sections to earn the certificate.`
     }
 } 

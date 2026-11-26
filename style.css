@@ -76,3 +76,7 @@ iframe{
     border: 2.5px solid white;
     border-radius: 10px;
 }
+
+a{
+    color: yellow;
+}
