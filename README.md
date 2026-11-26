@@ -1,7 +1,7 @@
 # NATURE WEBSITE
 This a a remake of the project [Rithunyaa/boba_drops](https://github.com/Rithunyaa/boba_drops). The website has 6 sections each with some amazing info about nature. It can also give you a certifcate.
 
-[!screenshot](assets/readme/img1.png)
+![screenshot](assets/readme/img1.png)
 
 ## HOW TO USE
 First clone the repository by running the following command:
@@ -22,10 +22,10 @@ Then open the index.html file on a web browser. If you want to download the cert
 
 ## PREVIEW
 
-[!screenshot2](assets/readme/img2.png)
+![screenshot2](assets/readme/img2.png)
 
-[!screenshot3](assets/readme/img3.png)
+![screenshot3](assets/readme/img3.png)
 
-[!screenshot4](assets/readme/img4.png)
+![screenshot4](assets/readme/img4.png)
 
-[!screenshot5](assets/readme/img5.png)
+![screenshot5](assets/readme/img5.png)
