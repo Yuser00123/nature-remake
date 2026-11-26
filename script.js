@@ -7,31 +7,11 @@ let btn_facts = document.getElementById("facts");
 let btn_videos = document.getElementById("videos");
 let btn_random = document.getElementById("get-random");
 
-let protect_clicked = false;
-let hacks_clicked = false;
-let facts_clicked = false;
-let videos_clicked = false;
-let random_clicked = false;
-
-btn_protect.addEventListener('click', () => {
-    protect_clicked = true;
-});
-
-btn_hacks.addEventListener('click', () => {
-    hacks_clicked = true;
-});
-
-btn_facts.addEventListener('click', () => {
-    facts_clicked = true;
-});
-
-btn_videos.addEventListener('click', () => {
-    videos_clicked = true;
-});
-
-btn_random.addEventListener('click', () => {
-    random_clicked = true;
-});
+if (sessionStorage.getItem("protect_clicked") === null) sessionStorage.setItem("protect_clicked", "false");
+if (sessionStorage.getItem("hacks_clicked") === null) sessionStorage.setItem("hacks_clicked", "false");
+if (sessionStorage.getItem("facts_clicked") === null) sessionStorage.setItem("facts_clicked", "false");
+if (sessionStorage.getItem("videos_clicked") === null) sessionStorage.setItem("videos_clicked", "false");
+if (sessionStorage.getItem("random_clicked") === null) sessionStorage.setItem("random_clicked", "false");
 
 const natureTasks = [
   `Plant at least two native trees in your neighbourhood, school, or garden. Before planting, research which tree species naturally grow in your region and are suitable for the available space. Ask someone experienced about proper planting techniques and watering requirements. Make sure the trees have enough sunlight and room to grow. Take responsibility for watering them regularly, especially during hot weather. Avoid damaging existing plants while preparing the soil. Add a small protective fence if necessary. Take photographs of your planting activity and observe the trees every month. Your goal is not simply to plant trees but to help them survive and grow into healthy habitats for wildlife.`,
@@ -291,14 +271,17 @@ function home_page() {
 }
 
 function open_protect() {
+    sessionStorage.setItem("protect_clicked", "true");
     window.location.href = "protect.html";
 }
 
 function open_hacks() {
+    sessionStorage.setItem("hacks_clicked", "true");
     window.location.href = "hacks.html";
 }
 
 function open_facts() {
+    sessionStorage.setItem("facts_clicked", "true");
     window.location.href = "facts.html";
 }
 
@@ -318,6 +301,7 @@ function show_enjoyment() {
 }
 
 function video() {
+    sessionStorage.setItem("videos_clicked", "true");
     window.location.href = "video.html";
 }
 
@@ -332,17 +316,29 @@ function random_num() {
 
 function show_random() {
     task.innerHTML = natureTasks[random_num()];
+    sessionStorage.setItem("random_clicked", "true");
 }
 
 function cert() {
     window.location.href = "certificate.html";
 }
 
-function open_cert(name) {
-    if (protect_clicked === true && hacks_clicked === true && facts_clicked === true && videos_clicked === true && random_clicked === true) {
-        cert_validity_content.innerHTML = `Congratulations ${name}! You have explored our whole website and have earned a certificate of appreciation.`
+function get_name() {
+    let uName = "player";
+    let userName = document.getElementById("certName").value.trim();
+    if (userName === "") {
+        return uName;
     }
     else {
-        cert_validity_content.innerHTML = `Sorry ${name}, you have not explored our whole website yet. Please explore all the sections to earn the certificate.`
+        return userName;
+    }
+}
+
+function open_cert(name) {
+    if (sessionStorage.getItem("protect_clicked") === "true" && sessionStorage.getItem("hacks_clicked") === "true" && sessionStorage.getItem("facts_clicked") === "true" && sessionStorage.getItem("videos_clicked") === "true" && sessionStorage.getItem("random_clicked") === "true") {
+        cert_validity_content.textContent = `Congratulations ${name}! You have explored our whole website and have earned a certificate of appreciation.`
+    }
+    else {
+        cert_validity_content.textContent = `Sorry ${name}, you have not explored our whole website yet. Please explore all the sections to earn the certificate.`
     }
 } 
