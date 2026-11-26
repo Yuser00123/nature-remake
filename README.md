@@ -18,7 +18,7 @@ Then open the index.html file on a web browser. If you want to download the cert
 - Has 100 tasks to complete
 
 ## LIVE DEMO LINK
-(Click here!)[https://nature-remake.vercel.app/]
+[Click here!](https://nature-remake.vercel.app/)
 
 ## PREVIEW
 
