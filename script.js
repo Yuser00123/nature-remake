@@ -324,7 +324,7 @@ function cert() {
 }
 
 function get_name() {
-    let uName = "player";
+    let uName = "warrior";
     let userName = document.getElementById("certName").value.trim();
     if (userName === "") {
         return uName;
